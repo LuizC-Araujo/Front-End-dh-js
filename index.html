@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luiz Araujo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+<body>
+    <header class="bookshop_header">
+        <h1 class="dh_title">Digital House - Livraria</h1>
+        <div class="menu_container">
+            <button id="dh_menu_btn"><i id="menu_bars" class="fas fa-bars"></i></button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Livros</a></li>
+                    <li><a href="#">Livros em Inglês</a></li>
+                    <li><a href="#">Outlet</a></li>
+                    <li><a href="#">E-books</a></li>
+                    <li><a href="#">Audio books</a></li>
+                    <li><a href="#">Coleções</a></li>
+                    <li class="lastLi"><a href="#">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="content">
+        <section id="dh_carousel">
+            <button id="btn_carousel_ant" class="btn_carousel"><</button>
+            <div id="dv_load">
+                <div id="dv_bar"></div>
+            </div>
+            <button id="btn_carousel_prox" class="btn_carousel">></button>
+        </section>
+        <section class="filters">
+            <div class="name_box">
+                <input type="text" id="search_bar" placeholder="Nome do livro...">
+                <button id="search_button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="advanced_filters">
+                <select name="category" id="category">
+                    <option value="" selected="true" disabled="disabled">Selecione a categoria</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Romance">Romance</option>
+                </select>
+                <select name="price_range" id="price_range">
+                    <option value="" selected="true" disabled="disabled">Faixa de preço</option>
+                    <option value="barato">R$1 - R$20</option>
+                    <option value="medio">R$21 - R$40</option>
+                    <option value="caro">R$41 - R$60</option>
+                    <option value="mais caro">acima de R$61</option>
+                </select>
+            </div>
+        </section>
+        
+        <section id="middle">
+            <section><button id="btn_livros_ant" class="btn_livros"><</button></section>
+            <section class="showcase">
+            </section>
+            <section><button id="btn_livros_prox" class="btn_livros">></button></section>
+        </section> 
+    </main>
+    <div id="info-livros">
+        <div class="cardInfo">
+            <a href="#"" class="linkBooks">
+            <img src="${json.imagem}" alt="Capa do livro ${json.titulo}">
+            
+            </a>
+        </div>  
+    </div>
+    <footer>
+        <p>Todos os direitos reservados - Digital House &#169;</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/37a6fc82c8.js" crossorigin="anonymous"></script>
+    <script src="js/carrossel.js"></script>
+    <script src='js/main.js'></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

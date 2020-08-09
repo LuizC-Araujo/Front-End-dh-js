@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEE0CB;
+}
+
+#menu {
+    display: none;
+    color: #FFFFFF;
+    position: absolute;
+    border-radius: 12px;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    list-style-type: none;
+    background: #F71735;
+    box-shadow: 6px 6px 15px #000;
+}
+
+
+nav li {
+    padding: 20px;
+    border-top: solid 5px #FFF;
+    border-radius: 5px;
+}
+.lastLi{
+    border-bottom: solid 5px #FFF !important;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    background: #8a2a36;
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+nav a{
+   text-decoration: none;
+   color: #FFFFFF; 
+   font-size: larger;
+   font-family: 'Mulish';
+
+}
+
+.bookshop_header {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F71735;
+    color: #EEE0CB;
+}
+
+.dh_title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+}
+
+#dh_menu_btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    background-color: #f7425a;
+    color: #EEE0CB;
+    font-size: 25px;
+    transition: filter .3s;
+}
+
+#dh_menu_btn:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+#dh_carousel {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc; 
+}
+
+.btn_livros{
+    height: 100%;
+    width: 50px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(55, 55, 55, 0.2);
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: filter .3s;
+}
+
+.btn_carousel {
+    height: 100%;
+    width: 50px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(55, 55, 55, 0.2);
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: filter .3s;
+}
+
+.btn_carousel:hover {
+    background-color: rgba(55, 55, 55, 0.5);
+}
+
+#dv_load {
+    width: 100%;
+    height: 8px;
+    margin-top: 25%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#dv_bar {
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.filters {
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.name_box {
+    display: flex;
+}
+
+#search_bar {
+    width: 50vw;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #888;
+    border-right: none;
+    outline: none;
+
+    font-family: "Mulish", sans-serif;
+    color: #666;
+}
+
+#search_button {
+    font-size: 20px;
+    padding: 11px;
+    border-radius: 0 25px 25px 0;
+    border: 1px solid #888;
+    border-left: none;
+    outline: none;
+
+    color: #666;
+
+    transition: filter .3s;
+}
+
+#search_button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.advanced_filters select {
+    width: 25vw;
+    font-size: 20px;
+    font-family: "Mulish", sans-serif;
+
+    padding: 10px;
+
+    color: #666;
+    border: 1px solid #888;
+}
+
+#middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn_livros_ant {
+    margin-left: 100px;
+}
+
+#btn_livros_prox {
+    margin-right: 100px;;
+}
+
+#info-livros{
+    height: 500px;
+    width: 900px;
+    background: #FFF;
+    border-radius: 30px;
+    border: solid 4px #F71735;
+    align-self: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    display: none;
+    text-align: justify;
+}
+
+.showcase {
+    width: 60vw;
+    height: 1050px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    margin: 10px 0;
+    position: relative;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.cardInfo{
+    width: 35%;
+    height: 400px;
+    margin: 10px 0;
+    position: relative;
+    margin: 40px;
+    border: solid 2px #000;
+}
+
+.card:hover {
+    border: solid 10px #555;
+}
+
+.linkBooks{
+    text-decoration: none;
+    color: #000;
+}
+
+.titulo{
+    font-size: 20px;
+    text-align: center;
+}
+
+.preco, .autor {
+    text-align: center;
+    font-size: 18px;
+}
+
+.containerInfo{
+    height: 90%;
+    width: 60%;
+    margin: 10px;
+    padding: 30px;
+}
+.overlay {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.notTyped{
+    text-align: center;
+    color: red;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #F71735;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEE0CB;
+}
+
+@media(max-width: 1899px) {
+    .showcase {
+        height: 1600px ;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1266px){
+    .showcase {
+        height: 3200px;
+        justify-content: center;
+    }
+}
